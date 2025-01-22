@@ -1,14 +1,18 @@
 import {Button} from './components/Button';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 type CounterPropsType = {
-    maxValue: number;
+    maxValue: number
+    startValue: number
+    counter: number
+
     addCounter: () => void
     resetCounter: () => void
-    counter: number
 }
 
-export const Counter = ({counter, maxValue, addCounter, resetCounter} : CounterPropsType) => {
+export const Counter = ({counter, startValue, maxValue, addCounter, resetCounter}: CounterPropsType) => {
+
+
 
     return (
         <div className="App-main">
@@ -22,7 +26,7 @@ export const Counter = ({counter, maxValue, addCounter, resetCounter} : CounterP
                 <Button title={'reset'}
                         onClick={resetCounter}
                         className="my-button"
-                        isDisabled={counter === 0}
+                        isDisabled={counter === startValue}
                 />
             </div>
         </div>

@@ -1,30 +1,52 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Counter} from './Counter';
+import {CounterSettings} from './CounterSettings';
 
 function App() {
 
-    // Инициализируем state для хранения счётчика
+    // Инициализируем state для хранения данных счётчика и настроек
     const [counter, setCounter] = useState<number>(0);
+    const [maxValue, setMaxValue] = useState(5);
+    const [startValue, setStartValue] = useState(0);
 
-    // Задаём максимально допустимое значение
-    const maxValue = 5;
-
+    // Увеличение счётчика
     const addCounter = () => {
         if (counter < maxValue) {
-            setCounter(counter + 1)
+            setCounter(counter + 1);
         }
     }
 
+    // Сброс счётчика
     const resetCounter = () => {
-        setCounter(0)
+        setCounter(startValue)
+    }
+
+    // Обновляем стейты стартового значения и максимального, также устанавливаем новое стандартное значение счетчика
+    const setSettings = (startValue: number, maxValue: number) => {
+        setStartValue(startValue)
+        setMaxValue(maxValue)
+
+        setCounter(startValue)
     }
 
 
     return (
         <div className="App">
             <header className="App-header">
-                    <Counter counter={counter} addCounter={addCounter} resetCounter={resetCounter} maxValue={maxValue} />
+                <CounterSettings
+                    startValue={startValue}
+                    maxValue={maxValue}
+                    setSettings={setSettings}
+                />
+                <Counter
+                    counter={counter}
+                    maxValue={maxValue}
+                    startValue={startValue}
+
+                    addCounter={addCounter}
+                    resetCounter={resetCounter}
+                />
             </header>
         </div>
     );

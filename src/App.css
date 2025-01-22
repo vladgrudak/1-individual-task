@@ -1,67 +1,90 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 100px;
-  color: #282c34;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 100px;
+    color: #282c34;
 }
 
 .App-main {
-  min-height: 40vh;
-  min-width: 50vw;
-  border: 5px solid #61DBFB;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+    min-height: 40vh;
+    min-width: 30vw;
+    border: 5px solid #61DBFB;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 .counter-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  flex-grow: 3;
-  background-color: #61DBFB;
-  border: 1px solid #61DBFB;
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 3;
+    color: #61DBFB;
+    border: 1px solid #61DBFB;
+    border-radius: 10px;
+}
+
+.settings-wrapper {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    justify-content: space-around;
+    width: 100%;
+    flex-grow: 3;
+    color: #61DBFB;
+    border: 1px solid #61DBFB;
+    border-radius: 10px;
+}
+
+.value-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.value-input-wrapper input {
+    text-align: center;
+    font-size: 15px;
 }
 
 .buttons-wrapper {
-  display: flex;
-  justify-content: space-around;
-  flex-grow: 1;
-  width: 100%;
-  border: 1px solid #61DBFB;
-  border-radius: 10px;
-  margin-top: 20px;
-  padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid #61DBFB;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 .my-button {
-  min-width: 45%;
-  font-size: 40px;
-  background-color: #61DBFB;
-  border-radius: 20px;
+    min-width: 45%;
+    font-size: 40px;
+    background-color: #61DBFB;
+    border-radius: 20px;
 }
 
 .max-value {
-  color: red;
+    color: red;
 }
