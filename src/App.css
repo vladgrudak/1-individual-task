@@ -17,14 +17,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
+    gap: 30px;
     font-size: 100px;
     color: #282c34;
 }
 
 .App-main {
-    min-height: 40vh;
-    min-width: 30vw;
+    height: 400px;
+    width: 500px;
+    min-width: 300px;
     border: 5px solid #61DBFB;
     border-radius: 10px;
     display: flex;
@@ -65,6 +68,9 @@
 .value-input-wrapper input {
     text-align: center;
     font-size: 15px;
+    border: 2px solid #61DBFB;
+    border-radius: 10px;
+    outline:none;
 }
 
 .buttons-wrapper {
@@ -85,6 +91,15 @@
     border-radius: 20px;
 }
 
-.max-value {
+.red-error {
     color: red;
+}
+
+.error-message {
+    font-size: 30px;
+}
+
+.input-error {
+    border: 2px solid red !important;
+    background-color: rgb(255, 123, 129);
 }

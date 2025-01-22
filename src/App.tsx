@@ -30,6 +30,11 @@ function App() {
         setCounter(startValue)
     }
 
+    const [errorMessage, setErrorMessage] = useState<string>('')
+
+    const showErrorMessage = (errorMessage: string) => {
+        setErrorMessage(errorMessage)
+    }
 
     return (
         <div className="App">
@@ -38,11 +43,14 @@ function App() {
                     startValue={startValue}
                     maxValue={maxValue}
                     setSettings={setSettings}
+                    showErrorMessage={showErrorMessage}
                 />
                 <Counter
                     counter={counter}
                     maxValue={maxValue}
                     startValue={startValue}
+
+                    errorMessage={errorMessage}
 
                     addCounter={addCounter}
                     resetCounter={resetCounter}
